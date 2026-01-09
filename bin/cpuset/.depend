@@ -1,0 +1,1 @@
+cpuset.full: /usr/lib/libc.a /usr/lib/libjail.a /usr/lib/libutil.a

@@ -1,0 +1,1 @@
+csh.full: /usr/lib/libc.a /usr/lib/libtermcapw.a /usr/lib/libcrypt.a

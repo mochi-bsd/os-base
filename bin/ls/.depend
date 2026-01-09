@@ -1,0 +1,1 @@
+ls.full: /usr/lib/libc.a /usr/lib/libutil.a /usr/lib/libtermcapw.a

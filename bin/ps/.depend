@@ -1,0 +1,1 @@
+ps.full: /usr/lib/libc.a /usr/lib/libm.a /usr/lib/libkvm.a /usr/lib/libjail.a /usr/lib/libxo.a

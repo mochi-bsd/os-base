@@ -1,0 +1,43 @@
+rmail.pieo: /home/sysadmin/usr/src/contrib/sendmail/rmail/rmail.c \
+  /home/sysadmin/usr/src/contrib/sendmail/include/sm/gen.h \
+  /home/sysadmin/usr/src/contrib/sendmail/include/sm/config.h sm_os.h \
+  /usr/include/osreldate.h \
+  /home/sysadmin/usr/src/contrib/sendmail/include/sm/cdefs.h \
+  /usr/include/sys/cdefs.h /usr/include/sys/_visible.h \
+  /home/sysadmin/usr/src/contrib/sendmail/include/sm/types.h \
+  /usr/include/sys/types.h /usr/include/machine/endian.h \
+  /usr/include/x86/endian.h /usr/include/sys/_types.h \
+  /usr/include/machine/_types.h /usr/include/x86/_types.h \
+  /usr/include/machine/_limits.h /usr/include/x86/_limits.h \
+  /usr/include/sys/_endian.h /usr/include/sys/_pthreadtypes.h \
+  /usr/include/sys/_stdint.h /usr/include/sys/bitcount.h \
+  /usr/include/sys/select.h /usr/include/sys/_sigset.h \
+  /usr/include/sys/_timeval.h /usr/include/sys/timespec.h \
+  /usr/include/sys/_timespec.h /usr/include/stddef.h \
+  /usr/include/sys/_null.h /usr/include/sys/param.h \
+  /usr/include/sys/_param.h /usr/include/sys/syslimits.h \
+  /usr/include/sys/signal.h /usr/include/sys/_sigaltstack.h \
+  /usr/include/sys/_sigval.h /usr/include/machine/signal.h \
+  /usr/include/x86/signal.h /usr/include/machine/param.h \
+  /usr/include/machine/_align.h /usr/include/x86/_align.h \
+  /usr/include/sys/limits.h /usr/include/sys/_maxphys.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/_clock_id.h /usr/include/time.h \
+  /usr/include/xlocale/_time.h /usr/include/sys/wait.h \
+  /usr/include/ctype.h /usr/include/_ctype.h /usr/include/runetype.h \
+  /usr/include/xlocale/_ctype.h /usr/include/fcntl.h \
+  /home/sysadmin/usr/src/contrib/sendmail/include/sm/io.h \
+  /usr/include/stdio.h \
+  /home/sysadmin/usr/src/contrib/sendmail/include/sm/varargs.h \
+  /usr/include/stdarg.h /usr/include/sys/_stdarg.h /usr/include/stdlib.h \
+  /home/sysadmin/usr/src/contrib/sendmail/include/sm/string.h \
+  /usr/include/string.h /usr/include/strings.h \
+  /usr/include/xlocale/_strings.h /usr/include/xlocale/_string.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sysexits.h \
+  /home/sysadmin/usr/src/contrib/sendmail/include/sm/conf.h \
+  /usr/include/paths.h /usr/include/sys/sysctl.h \
+  /usr/include/sys/utsname.h \
+  /home/sysadmin/usr/src/contrib/sendmail/include/sm/errstring.h \
+  /usr/include/errno.h \
+  /home/sysadmin/usr/src/contrib/sendmail/include/sendmail/pathnames.h
