@@ -9,8 +9,9 @@
 # - Optimized for performance and security
 #
 
+machine		amd64
 cpu		HAMMER
-ident		MOCHI-SYS
+ident		SYSKERNEL
 
 makeoptions	WITH_CTF=1		# Run ctfconvert(1) for DTrace support
 
@@ -63,7 +64,7 @@ options 	COMPAT_FREEBSD13	# Compatible with FreeBSD13
 options 	COMPAT_FREEBSD14	# Compatible with FreeBSD14
 
 # System features
-options 	KTRACE			# ktrace(1) support
+# options 	KTRACE			# ktrace(1) support
 options 	STACK			# stack(9) support
 options 	SYSVSHM			# SYSV-style shared memory
 options 	SYSVMSG			# SYSV-style message queues
@@ -71,33 +72,33 @@ options 	SYSVSEM			# SYSV-style semaphores
 options 	_KPOSIX_PRIORITY_SCHEDULING # POSIX P1003_1B real-time extensions
 options 	PRINTF_BUFR_SIZE=128	# Prevent printf output being interspersed
 options 	KBD_INSTALL_CDEV	# install a CDEV entry in /dev
-options 	HWPMC_HOOKS		# Necessary kernel hooks for hwpmc(4)
+# options 	HWPMC_HOOKS		# Necessary kernel hooks for hwpmc(4)
 
 # Security
-options 	CAPABILITY_MODE		# Capsicum capability mode
-options 	CAPABILITIES		# Capsicum capabilities
-options 	MAC			# TrustedBSD MAC Framework
+# options 	CAPABILITY_MODE		# Capsicum capability mode
+# options 	CAPABILITIES		# Capsicum capabilities
+# options 	MAC			# TrustedBSD MAC Framework
 
 # DTrace and debugging
-options 	KDTRACE_FRAME		# Ensure frames are compiled in
-options 	KDTRACE_HOOKS		# Kernel DTrace hooks
-options 	DDB_CTF			# Kernel ELF linker loads CTF data
+# options 	KDTRACE_FRAME		# Ensure frames are compiled in
+# options 	KDTRACE_HOOKS		# Kernel DTrace hooks
+# options 	DDB_CTF			# Kernel ELF linker loads CTF data
 options 	INCLUDE_CONFIG_FILE	# Include this file in kernel
 
 # Resource management
-options 	RACCT			# Resource accounting framework
-options 	RACCT_DEFAULT_TO_DISABLED # Set kern.racct.enable=0 by default
-options 	RCTL			# Resource limits
+# options 	RACCT			# Resource accounting framework
+# options 	RACCT_DEFAULT_TO_DISABLED # Set kern.racct.enable=0 by default
+# options 	RCTL			# Resource limits
 
 # Minimal debugging (remove for production)
 options 	KDB			# Enable kernel debugger support
 options 	KDB_TRACE		# Print a stack trace for a panic
 
 # Kernel dump features
-options 	EKCD			# Support for encrypted kernel dumps
-options 	ZSTDIO			# zstd-compressed kernel and user dumps
-options 	DEBUGNET		# debugnet networking
-options 	NETDUMP			# netdump(4) client support
+# options 	EKCD			# Support for encrypted kernel dumps
+# options 	ZSTDIO			# zstd-compressed kernel and user dumps
+# options 	DEBUGNET		# debugnet networking
+# options 	NETDUMP			# netdump(4) client support
 
 # CPU frequency control
 device		cpufreq
