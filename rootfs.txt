@@ -1,0 +1,132 @@
+/
+├── apps
+│   ├── Foo.app
+│   │   ├── exec
+│   │   │   ├── Foo
+│   │   └── manifest.json
+├── bin -> system/sysbin/
+├── boot -> system/boot
+├── dev
+│   ├── nda0
+│   ├── nda0p1
+│   ├── nda0p2
+│   └── da0
+├── etc -> system/etc
+├── library
+│   ├── core
+│   │   ├── libc.ext
+│   │   ├── libcrypt.ext
+│   │   ├── libedit.ext
+│   │   ├── libelf.ext
+│   │   ├── libjail.ext
+│   │   ├── libkvm.ext
+│   │   ├── libm.ext
+│   │   ├── libmd.ext
+│   │   ├── libsys.ext
+│   │   ├── libtinfow.ext
+│   │   ├── libutil.ext
+│   │   ├── libxo.ext
+│   │   └── shared
+│   │       └── terminfo
+│   │           └── x
+│   │               ├── xterm
+│   │               └── xterm-256color
+│   ├── media
+│   │   ├── audio
+│   │   │   └── plugins
+│   │   │       ├── CLAP
+│   │   │       ├── Native
+│   │   │       ├── VST
+│   │   │       └── VST3
+│   │   ├── photo
+│   │   │   └── plugins
+│   │   │       ├── ImageProcessor
+│   │   │       └── RAWEditor
+│   │   └── video
+│   │       └── plugins
+│   │           ├── Glow
+│   │           └── LUTs
+│   └── shared
+│       ├── audioassets
+│       └── fonts
+├── system
+│   ├── boot
+│   │   ├── coreservices
+│   │   │   └── loader.conf
+│   │   └── kernel
+│   │       ├── modules
+│   │       └── syskernel
+│   ├── etc
+│   │   ├── fstab
+│   │   ├── group
+│   │   ├── ld-elf.ext.conf
+│   │   ├── master.passwd
+│   │   ├── passwd
+│   │   ├── profile
+│   │   ├── pwd.db
+│   │   ├── shrc
+│   │   ├── spwd.db
+│   │   └── termcap
+│   ├── runtime
+│   │   └── elf
+│   │       ├── ld-elf.ext
+│   │       └── ld.ext
+│   └── sysbin
+│       ├── [
+│       ├── cat
+│       ├── chflags
+│       ├── chio
+│       ├── chmod
+│       ├── chown
+│       ├── cp
+│       ├── cpuset -> ../../system/sysbin/cpuset
+│       ├── csh
+│       ├── date
+│       ├── dd
+│       ├── df
+│       ├── domainname
+│       ├── echo
+│       ├── ed
+│       ├── expr
+│       ├── getent
+│       ├── getfacl
+│       ├── groups
+│       ├── hostname
+│       ├── id
+│       ├── init
+│       ├── kenv
+│       ├── kill
+│       ├── ldconfig
+│       ├── link
+│       ├── ln
+│       ├── ls
+│       ├── mkdir
+│       ├── mv
+│       ├── nproc
+│       ├── pax
+│       ├── ps
+│       ├── pwait
+│       ├── pwd
+│       ├── pwd_mkdb
+│       ├── realpath
+│       ├── red
+│       ├── rm
+│       ├── rmdir
+│       ├── setfacl
+│       ├── sh
+│       ├── sleep
+│       ├── stty
+│       ├── sync
+│       ├── tcsh
+│       ├── test
+│       ├── uname
+│       ├── unlink
+│       ├── uuidgen
+│       └── whoami
+├── users
+│   └── sysadmin #root user
+├── var
+│   └── run
+│       └── ld-elf.so.hints
+├── volumes
+│   └── disk1p1 : System Drive (mount form /dev/nda0p2)

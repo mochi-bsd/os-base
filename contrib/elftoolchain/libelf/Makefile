@@ -3,6 +3,7 @@
 TOP=	..
 
 LIB=	elf
+SHLIB_EXT?= .ext
 
 SRCS=	elf.c							\
 	elf_begin.c						\

@@ -110,9 +110,13 @@ TAG_ARGS=	-T ${TAGS:ts,:[*]}
 LDFLAGS+= -static
 .endif
 
-.if ${MK_DEBUG_FILES} != "no"
-PROG_FULL=${PROG}.full
-# Use ${DEBUGDIR} for base system debug files, else .debug subdirectory
+.if defined(PROG)
+.if ${BINDIR} == "/bin"
+BINDIR:=/system/sysbin
+.endif
+.if ${BINDIR} == "/sbin"
+BINDIR:=/system/sysbin
+.endif
 .if defined(BINDIR) && (\
     ${BINDIR} == "/bin" ||\
     ${BINDIR:C%/libexec(/.*)?%/libexec%} == "/libexec" ||\
@@ -296,7 +300,14 @@ _proginstall:
 realinstall: _scriptsinstall
 .ORDER: beforeinstall _scriptsinstall
 
+
 SCRIPTSDIR?=	${BINDIR}
+.if ${SCRIPTSDIR} == "/bin"
+SCRIPTSDIR:=/system/sysbin
+.endif
+.if ${SCRIPTSDIR} == "/sbin"
+SCRIPTSDIR:=/system/sysbin
+.endif
 SCRIPTSOWN?=	${BINOWN}
 SCRIPTSGRP?=	${BINGRP}
 SCRIPTSMODE?=	${BINMODE}
