@@ -2,7 +2,7 @@ PACKAGE=runtime
 SCRIPTS = freebsd-version
 MAN = freebsd-version.1
 CLEANFILES = freebsd-version freebsd-version.sh
-NEWVERS = ${SRCTOP}/sys/conf/newvers.sh
+NEWVERS = ${SRCTOP}/kernel/sys/conf/newvers.sh
 
 freebsd-version.sh: ${.CURDIR}/freebsd-version.sh.in ${NEWVERS}
 	eval $$(sh ${NEWVERS} -v); \

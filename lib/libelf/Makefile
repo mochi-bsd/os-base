@@ -92,7 +92,7 @@ CLEANFILES=	${GENSRCS}
 CLEANDIRS=	sys
 CFLAGS+=	-I. -I${SRCDIR} -I${ELFTCDIR}/common
 
-sys/elf32.h sys/elf64.h sys/elf_common.h: ${SRCTOP}/sys/${.TARGET} .NOMETA
+sys/elf32.h sys/elf64.h sys/elf_common.h: ${SRCTOP}/kernel/sys/${.TARGET} .NOMETA
 	mkdir -p ${.OBJDIR}/sys
 	ln -sf ${.ALLSRC} ${.TARGET}
 

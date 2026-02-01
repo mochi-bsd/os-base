@@ -29,7 +29,7 @@ CFLAGS+=-I${ELFTCDIR}/libelftc -I${ELFTCDIR}/common
 SRCS+=		sys/elf32.h sys/elf64.h sys/elf_common.h
 CLEANDIRS=	sys
 CFLAGS+=	-I.
-sys/elf32.h sys/elf64.h sys/elf_common.h: ${SRCTOP}/sys/${.TARGET} .NOMETA
+sys/elf32.h sys/elf64.h sys/elf_common.h: ${SRCTOP}/kernel/sys/${.TARGET} .NOMETA
 	mkdir -p ${.OBJDIR}/sys
 	ln -sf ${.ALLSRC} ${.TARGET}
 
