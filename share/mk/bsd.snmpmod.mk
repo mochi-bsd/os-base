@@ -1,7 +1,7 @@
 
 INCSDIR=	${INCLUDEDIR}/bsnmp
 
-SHLIB_NAME=	snmp_${MOD}.so.${SHLIB_MAJOR}
+SHLIB_NAME=	snmp_${MOD}.ext
 SRCS+=		${MOD}_oid.h ${MOD}_tree.c ${MOD}_tree.h
 CLEANFILES+=	${MOD}_oid.h ${MOD}_tree.c ${MOD}_tree.h
 CFLAGS+=	-I.

@@ -434,11 +434,11 @@ STAGE_TARGETS+= stage_files
 .endif
 
 .if !empty(_LIBS) && !defined(INTERNALLIB)
-.if defined(SHLIBDIR) && ${SHLIBDIR} != ${LIBDIR} && ${_LIBS:Uno:M*.so.*} != ""
+.if defined(SHLIBDIR) && ${SHLIBDIR} != ${LIBDIR} && ${_LIBS:Uno:M*.ext} != ""
 STAGE_SETS+= shlib
 STAGE_DIR.shlib= ${STAGE_OBJTOP}${SHLIBDIR}
-STAGE_FILES.shlib+= ${_LIBS:M*.so.*}
-stage_files.shlib: ${_LIBS:M*.so.*}
+STAGE_FILES.shlib+= ${_LIBS:M*.ext}
+stage_files.shlib: ${_LIBS:M*.ext}
 .endif
 
 .if defined(SHLIB_LINK) && commands(${SHLIB_LINK:R}.ld)
