@@ -116,7 +116,7 @@ ${var}=		${HOST_${var}}
 .endif
 
 .if !defined(FREEBSD_REVISION)
-FREEBSD_REVISION!= sed -n '/^REVISION=/{s,.*=,,;s,",,g;p; }' ${SRCTOP}/sys/conf/newvers.sh
+FREEBSD_REVISION!= sed -n '/^REVISION=/{s,.*=,,;s,",,g;p; }' ${SRCTOP}/kernel/conf/newvers.sh
 .export FREEBSD_REVISION
 .endif
 

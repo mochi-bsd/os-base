@@ -23,7 +23,7 @@ RELOBJTOP?=	${RELTOP}
 RELSRCTOP?=	${RELTOP}
 
 .if !defined(OS_REVISION)
-OS_REVISION!=eval `sh ${SRCTOP}/sys/conf/newvers.sh -V REVISION` && echo $$REVISION || echo
+OS_REVISION!=eval `sh ${SRCTOP}/kernel/conf/newvers.sh -V REVISION` && echo $$REVISION || echo
 .export OS_REVISION
 .endif
 
