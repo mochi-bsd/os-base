@@ -1159,7 +1159,7 @@ _bootstrap-tools:
 .for d in ${LIBCOMPAT_INCLUDE_DIRS}
 	mkdir -p ${WORLDTMP}/usr/include/${d}
 .endfor
-	ln -sf ${.CURDIR}/kernel/sys ${WORLDTMP}
+	ln -sf ${.CURDIR}/kernel ${WORLDTMP}
 .if ${MK_DEBUG_FILES} != "no"
 	${WORLDTMP_MTREE} -f ${.CURDIR}/etc/mtree/BSD.debug.dist \
 	    -p ${WORLDTMP}/usr/lib >/dev/null
