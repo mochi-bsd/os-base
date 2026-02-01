@@ -1,4 +1,5 @@
-SHLIBDIR?= /library/core
+SHLIBDIR= /library/core
+LIBDIR= /library/core
 SHLIB_EXT?= .ext
 
 .include <bsd.own.mk>
