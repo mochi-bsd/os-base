@@ -31,7 +31,7 @@ LIB_PRIVATE=	${PRIVATELIB:Dprivate}
 .if !defined(SHLIB) && defined(LIB)
 SHLIB=		${LIB}
 .endif
-.if !defined(SHLIB_NAME) && defined(SHLIB) && defined(SHLIB_MAJOR)
+.if !defined(SHLIB_NAME) && defined(SHLIB)
 SHLIB_NAME=	lib${LIB_PRIVATE}${SHLIB}.ext
 .endif
 .if defined(SHLIB_NAME) && !empty(SHLIB_NAME:M*.ext)
@@ -272,7 +272,7 @@ ${SHLIB_NAME_FULL}: ${SOBJS}
 	@rm -f ${SHLIB_NAME} ${SHLIB_LINK}
 .if defined(SHLIB_LINK) && !commands(${SHLIB_LINK:R}.ld) && ${MK_DEBUG_FILES} == "no"
 	# Note: This uses ln instead of ${INSTALL_LIBSYMLINK} since we are in OBJDIR
-	@${LN:Uln} -fs ${SHLIB_NAME} ${SHLIB_LINK}
+	@if [ "${SHLIB_NAME}" != "${SHLIB_LINK}" ]; then ${LN:Uln} -fs ${SHLIB_NAME} ${SHLIB_LINK}; fi
 .endif
 	${_LD:N${CCACHE_BIN}} ${LDFLAGS} ${SSP_CFLAGS} ${SOLINKOPTS} \
 	    -o ${.TARGET} -Wl,-soname,${SONAME} ${SOBJS} ${LDADD}
@@ -287,7 +287,7 @@ ${SHLIB_NAME}: ${SHLIB_NAME_FULL} ${DEBUGFILE}
 	    ${SHLIB_NAME_FULL} ${.TARGET}
 .if defined(SHLIB_LINK) && !commands(${SHLIB_LINK:R}.ld)
 	# Note: This uses ln instead of ${INSTALL_LIBSYMLINK} since we are in OBJDIR
-	@${LN:Uln} -fs ${SHLIB_NAME} ${SHLIB_LINK}
+	@if [ "${SHLIB_NAME}" != "${SHLIB_LINK}" ]; then ${LN:Uln} -fs ${SHLIB_NAME} ${SHLIB_LINK}; fi
 .endif
 
 ${DEBUGFILE}: ${SHLIB_NAME_FULL}

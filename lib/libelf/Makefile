@@ -97,7 +97,7 @@ sys/elf32.h sys/elf64.h sys/elf_common.h: ${SRCTOP}/kernel/${.TARGET} .NOMETA
 	mkdir -p ${.OBJDIR}/sys
 	ln -sf ${.ALLSRC} ${.TARGET}
 
-SHLIB_MAJOR=	2
+
 
 MAN=	elf.3							\
 	elf_begin.3						\
