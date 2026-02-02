@@ -21,7 +21,7 @@
 
 # Include the generated makefile containing the *complete* list
 # of syscall names in MIASM.
-.include "${SRCTOP}/sys/sys/syscall.mk"
+.include "${SRCTOP}/kernel/sys/syscall.mk"
 
 # Include machine dependent definitions.
 .include "${LIBSYS_SRCTOP}/${LIBC_ARCH}/Makefile.sys"

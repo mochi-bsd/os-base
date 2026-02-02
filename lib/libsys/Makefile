@@ -1,5 +1,5 @@
 PACKAGE=	clibs
-SHLIBDIR?= /lib
+SHLIBDIR?= /library/core
 
 .include <src.opts.mk>
 
