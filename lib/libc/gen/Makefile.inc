@@ -184,8 +184,8 @@ CFLAGS.sysconf.c= -I${SRCTOP}/contrib/tzcode
 CFLAGS.dlfcn.c= ${RTLD_HDRS}
 CFLAGS.tls.c= ${RTLD_HDRS}
 
-.PATH: ${SRCTOP}/contrib/libc-pwcache
-SRCS+=	pwcache.c pwcache.h
+# .PATH: ${SRCTOP}/contrib/libc-pwcache
+# SRCS+=	pwcache.c pwcache.h
 
 .PATH: ${SRCTOP}/contrib/libc-vis
 CFLAGS+=	-I${SRCTOP}/contrib/libc-vis
