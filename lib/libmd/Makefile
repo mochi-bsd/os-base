@@ -1,11 +1,11 @@
-SHLIBDIR?= /lib
+SHLIBDIR?= /library/core
 
 .include <src.opts.mk>
 .include <bsd.compiler.mk>
 
 PACKAGE=	runtime
 LIB=	md
-SHLIB_MAJOR= 7
+# SHLIB_MAJOR= 7
 SRCS=	md4c.c md5c.c md4hl.c md5hl.c \
 	rmd160c.c rmd160hl.c \
 	sha0c.c sha0hl.c sha1c.c sha1hl.c \
@@ -92,7 +92,7 @@ CLEANFILES+=	md[245]hl.c md[245].ref md[245].3 mddriver \
 SRCS+=		sys/md5.h
 CLEANDIRS=	sys
 CFLAGS+=	-I.
-sys/md5.h: ${SRCTOP}/sys/${.TARGET} .NOMETA
+sys/md5.h: ${SRCTOP}/kernel/${.TARGET} .NOMETA
 	ln -sf ${.ALLSRC} ${.TARGET}
 
 # Define WEAK_REFS to provide weak aliases for libmd symbols
@@ -101,14 +101,14 @@ sys/md5.h: ${SRCTOP}/sys/${.TARGET} .NOMETA
 # in which case:
 #   * macros are used to rename symbols to libcrypt internal names
 #   * no weak aliases are generated
-CFLAGS+= -I${.CURDIR} -I${SRCTOP}/sys/crypto/sha2
-CFLAGS+= -I${SRCTOP}/sys/crypto/skein
+CFLAGS+= -I${.CURDIR} -I${SRCTOP}/kernel/crypto/sha2
+CFLAGS+= -I${SRCTOP}/kernel/crypto/skein
 CFLAGS+= -DWEAK_REFS
 # unroll the 256 and 512 loops, half unroll the 1024
 CFLAGS.skein_block.c+= -DSKEIN_LOOP=995
-.PATH: ${.CURDIR}/${MACHINE_ARCH} ${SRCTOP}/sys/crypto/sha2
-.PATH: ${SRCTOP}/sys/crypto/skein ${SRCTOP}/sys/crypto/skein/${MACHINE_ARCH}
-.PATH: ${SRCTOP}/sys/kern
+.PATH: ${.CURDIR}/${MACHINE_ARCH} ${SRCTOP}/kernel/crypto/sha2
+.PATH: ${SRCTOP}/kernel/crypto/skein ${SRCTOP}/kernel/crypto/skein/${MACHINE_ARCH}
+.PATH: ${SRCTOP}/kernel/kern
 
 USE_ASM_SOURCES?=1
 .if defined(BOOTSTRAPPING) || ${MK_MACHDEP_OPTIMIZATIONS} == no
