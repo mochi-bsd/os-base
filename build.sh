@@ -4,6 +4,6 @@ set -e
 cd ~/mochi-src
 git pull
 
-cd lib/libelf
+cd bin
 make
 make DESTDIR=../mochifs install
